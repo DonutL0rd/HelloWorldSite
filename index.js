@@ -1,5 +1,13 @@
-const intrestRate = 0.3; 
+var buttonClicked = true; 
 
-for (let i = 0; i < 20; i++){ 
-    console.log(i)
-}
+function changeText() {
+    const textElement = document.getElementById("text");
+    if (buttonClicked == true){ 
+        textElement.innerText = "You clicked the button!";
+        buttonClicked = false;
+    }else{
+        textElement.innerText = "You clicked it again!"
+        buttonClicked = true;
+    }
+  }
+  
