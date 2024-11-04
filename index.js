@@ -1,16 +1,20 @@
 var buttonClicked = true; 
-console.log("test")
 var i = 1;
-function changeText() {
-    const textElement = document.getElementById("text");
-    if (buttonClicked){ 
-        console.log("button clicked x " + i++)
-        textElement.innerText = "YES";
-        buttonClicked = false;
-    }else{
-        console.log("button clicked x "+ i++)
-        textElement.innerText = "DOES CRAP THIS WORK"
-        buttonClicked = true;
+const textElement = document.getElementById("header");
+
+document.getElementById("yourButtonId").addEventListener("click", function(event) {
+    event.preventDefault();
+    var email = document.getElementById("inputEmail").value;
+    var password = document.getElementById("inputPassword2").value;
+    console.log(email,password);
+ 
+
+    if(email == 'hello' && password =='world'){ 
+        textElement.innerText = "help";
+        console.log('worked');
+        window.location.href = "index.html"
     }
-  }
+    
+});
+
   
